@@ -34,6 +34,16 @@ function Home() {
           </p>
           
           <div className="timeline">
+              <div className="timeline-event">
+              <div className="timeline-date">IT</div>
+              <div className="timeline-content">
+                <h3>System & Infrastructure Solutions</h3>
+                <p>
+                  Cost-effective technology repairs and upgrades,
+                  ensuring minimal downtime and maximum productivity.
+                </p>
+              </div>
+            </div>
             <div className="timeline-event">
               <div className="timeline-date">Web</div>
               <div className="timeline-content">
@@ -42,16 +52,6 @@ function Home() {
                   Responsive, performance-optimized websites built with modern 
                   frameworks (React, Next.js). Focus on clean code and 
                   maintainable architecture.
-                </p>
-              </div>
-            </div>
-            <div className="timeline-event">
-              <div className="timeline-date">IT</div>
-              <div className="timeline-content">
-                <h3>Infrastructure Solutions</h3>
-                <p>
-                  Cost-effective technology setups for growing businesses, 
-                  including cloud migrations and workflow automation.
                 </p>
               </div>
             </div>
@@ -114,11 +114,8 @@ function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="footer">
-        <p>Available for select Q3 2023 engagements • adamus.casper@gmail.com</p>
-      </footer>
     </div>
+    
   );
 }
 

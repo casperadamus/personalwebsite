@@ -5,7 +5,7 @@ function About() {
     <div className="container">
       <header className="prose-header">
         <h1>Professional Journey</h1>
-        
+        <p>I've had the opprotunity to </p>
       </header>
 
       <main>
@@ -39,7 +39,7 @@ function About() {
           <h2>Work History</h2>
           <div className="timeline">
             <div className="timeline-event">
-              <div className="timeline-date">2018-19</div>
+              <div className="timeline-date">2023</div>
               <div className="timeline-content">
                 <h3>Tech Intern • Portland Web Solutions</h3>
                 <p>
@@ -76,11 +76,11 @@ function About() {
           <h2>Education</h2>
           <div className="metrics">
             <div className="metric">
-              <div className="metric-value">3.8</div>
+              <div className="metric-value">N/A</div>
               <div className="metric-label">College GPA</div>
             </div>
             <div className="metric">
-              <div className="metric-value">94%</div>
+              <div className="metric-value">35%</div>
               <div className="metric-label">Degree Progress</div>
             </div>
           </div>
