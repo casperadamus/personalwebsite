@@ -1,0 +1,114 @@
+/* Contact.css */
+.contact-page {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.contact-page h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  margin: 2rem 0 1rem;
+  border-bottom: 1px solid var(--stone-200);
+  padding-bottom: 0.5rem;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.contact-form h2,
+.direct-contact h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--slate-900);
+  margin: 0 0 1.5rem;
+  border-bottom: 1px solid var(--stone-200);
+  padding-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--slate-700);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--stone-200);
+  border-radius: 4px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--sky-600);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: var(--sky-600);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Lora', serif;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--slate-700);
+}
+
+.direct-contact p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.direct-contact a {
+  color: var(--sky-600);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.direct-contact a:hover {
+  color: var(--slate-900);
+  text-decoration: underline;
+}
+
+.social-media {
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-page h1 {
+    font-size: 1.8rem;
+  }
+}
