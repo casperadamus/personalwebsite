@@ -63,17 +63,16 @@ function Home() {
           <h2>Education Funding Model</h2>
           <p>
             100% of all service revenue directly supports my Computer Engineering 
-            education at the University of Connecticut. This creates a sustainable 
-            knowledge loop:
+            education at the University of Connecticut. These are the numbers for reference:
           </p>
           
           <div className="metrics">
             <div className="metric">
-              <div className="metric-value">1:2.4</div>
-              <div className="metric-label">ROI Ratio</div>
+              <div className="metric-value">$36,000</div>
+              <div className="metric-label">Cost of Attendance</div>
             </div>
             <div className="metric">
-              <div className="metric-value">$20</div>
+              <div className="metric-value">$20 / $7000</div>
               <div className="metric-label">Tuition Covered</div>
             </div>
             <div className="metric">
@@ -87,32 +86,22 @@ function Home() {
           </div>
         </section>
 
-        {/* Technical Articles */}
+        {/* Technical Articles 
         <section className="prose-section">
           <h2>Recent Technical Writings</h2>
           <div className="timeline">
             <div className="timeline-event">
-              <div className="timeline-date">Jun</div>
+              <div className="timeline-date">Jul</div>
               <div className="timeline-content">
-                <h3>Optimizing React Component Trees</h3>
+                <h3>Troubleshooting: Mac Not Discovering Boot Drive</h3>
                 <p>
-                  Case study on reducing re-renders in complex applications, 
-                  leading to 40% performance gains.
-                </p>
-              </div>
-            </div>
-            <div className="timeline-event">
-              <div className="timeline-date">May</div>
-              <div className="timeline-content">
-                <h3>Cost-Effective Cloud Solutions</h3>
-                <p>
-                  How small businesses can leverage serverless architectures 
-                  without unnecessary expenses.
+                  When your Mac fails to detect the boot drive during startup, you may encounter various error screens or unexpected behavior. 
                 </p>
               </div>
             </div>
           </div>
         </section>
+*/}
       </main>
     </div>
     

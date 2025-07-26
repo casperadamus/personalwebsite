@@ -43,13 +43,13 @@ function Navbar() {
           >
             Contact
           </Link>
-          <Link 
+          {/*<Link 
             to="/contact" 
             className="nav-link" 
             onClick={() => setMenuOpen(false)}
           >
             Writing
-          </Link>
+          </Link>*/}
         </div>
       </div>
     </div>

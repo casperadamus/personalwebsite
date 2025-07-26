@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Contacts.css'; // Make sure to create this CSS file
+import emailjs from 'emailjs-com';
+import './Contacts.css';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ function Contact() {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,10 +21,31 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Replace these with your actual EmailJS credentials
+    const serviceID = 'service_v9cp7pj';
+    const templateID = 'template_slnrbij';
+    const userID = 'AX87zizp7a2qcvEoi';
+
+    emailjs.send(serviceID, templateID, {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message
+    }, userID)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        setSubmitStatus('error');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -31,6 +55,16 @@ function Contact() {
       <div className="contact-methods">
         <section className="contact-form">
           <h2>Send a Message</h2>
+          {submitStatus === 'success' && (
+            <div className="alert success">
+              Thank you! Your message has been sent successfully.
+            </div>
+          )}
+          {submitStatus === 'error' && (
+            <div className="alert error">
+              Oops! Something went wrong. Please try again later.
+            </div>
+          )}
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
@@ -67,15 +101,19 @@ function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="How can I help you?"
+                rows="5"
               />
             </div>
             
-            <button type="submit" className="submit-btn">
-              Send Message
+            <button 
+              type="submit" 
+              className="submit-btn"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </section>
-        
         <section className="direct-contact">
           <h2>Direct Contact</h2>
           <div className="contact-info">

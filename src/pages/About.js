@@ -41,10 +41,9 @@ function About() {
             <div className="timeline-event">
               <div className="timeline-date">2023</div>
               <div className="timeline-content">
-                <h3>Tech Intern Volunteer • New Britain MIS</h3>
+                <h3>Tech Volunteer • New Britain MIS</h3>
                 <p>
-                  Assisted in developing WordPress sites for clients, gaining real-world 
-                  experience with client communications and project management.
+                  Volunteered with my school district to get schools tech wise ready for the year. Set up Chromebook carts across buildings and helped improve the district website by working on a calendar that was easier for people to use.
                 </p>
               </div>
             </div>
@@ -53,18 +52,16 @@ function About() {
               <div className="timeline-content">
                 <h3>Data & Client Support Intern • Pratt & Whitneyx </h3>
                 <p>
-                  Built custom Shopify stores and React applications while attending 
-                  community college. Used earnings to fund university applications.
+                  Helped improve how new aerospace clients were onboarded by using SQL to look through fleet data and build dashboard metrics. Also made things easier for new hires by talking with Power BI developers to understand their roles and figure out what info was really useful.
                 </p>
               </div>
             </div>
             <div className="timeline-event">
-              <div className="timeline-date">2022-Present</div>
+              <div className="timeline-date">2025-Present</div>
               <div className="timeline-content">
-                <h3>Junior Developer • Northwest Tech Collective</h3>
+                <h3>IT Intern • East Hartford Public Schools</h3>
                 <p>
-                  Currently working remotely while pursuing my CS degree, specializing in 
-                  API integrations and performance optimization.
+                  Set up staff laptops by installing the right software and making sure the operating systems were ready to go. Fixed Chromebooks and other laptops by figuring out both hardware and software problems. Also helped set up classrooms by placing and organizing devices for the start of the school year.
                 </p>
               </div>
             </div>
@@ -80,28 +77,27 @@ function About() {
               <div className="metric-label">College GPA</div>
             </div>
             <div className="metric">
-              <div className="metric-value">35%</div>
+              <div className="metric-value">37%</div>
               <div className="metric-label">Degree Progress</div>
             </div>
           </div>
           <div className="timeline">
             <div className="timeline-event">
-              <div className="timeline-date">2021-23</div>
+              <div className="timeline-date">2021-25</div>
               <div className="timeline-content">
-                <h3>Portland Community College</h3>
+                <h3>CCSU, CT State, and UConn Dual Enrollment </h3>
                 <p>
-                  Associate's in Computer Science. Graduated with honors while maintaining 
-                  freelance client work.
+                  Completed 51 college credits while in high school, focusing on physics and mathematics courses. This experience helped me build a strong foundation for my future studies.
                 </p>
               </div>
             </div>
             <div className="timeline-event">
-              <div className="timeline-date">2023-25</div>
+              <div className="timeline-date">2025-Present</div>
               <div className="timeline-content">
-                <h3>Oregon State University</h3>
+                <h3>University of Connecticut</h3>
                 <p>
-                  Bachelor's in Computer Science (in progress). Specializing in distributed 
-                  systems and web architectures.
+                  Bachelor's in Computer Engineering (in progress). Specializing in queing 
+                  systems and mathematics.
                 </p>
               </div>
             </div>
@@ -112,9 +108,7 @@ function About() {
         <section className="prose-section">
           <h2>Present Direction</h2>
           <p>
-            Balancing professional development with academic growth, I allocate 20% of 
-            all freelance income to educational expenses while continuously expanding 
-            my technical capabilities through real-world projects.
+            My current focus is on pursuing my education whilst still having an outlook towards career and research opportunities.
           </p>
         </section>
       </main>
