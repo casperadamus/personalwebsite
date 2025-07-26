@@ -2,7 +2,7 @@
   "name": "personal-website",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://casperadamus.github.io/personalwebsite",
+  "homepage": "https://casperadamus.github.io/personalwebsite/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
