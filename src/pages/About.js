@@ -4,8 +4,8 @@ function About() {
   return (
     <div className="container">
       <header className="prose-header">
-        <h1>Professional Journey</h1>
-        <p>I've had the opprotunity to </p>
+        <h1>Journey</h1>
+        <p>I've had the opprotunity to be apart of many influential projects and experiences. </p>
       </header>
 
       <main>
@@ -18,7 +18,7 @@ function About() {
               <div className="timeline-content">
                 <h3>Born in New Britain, CT</h3>
                 <p>
-                  Grew up in a not-so tech savy household
+                  Grew up in a small town, where I met a lot of my friends and great role models that aided throughout my K-12 education, allowing me to find passion in the things I do today! 
                 </p>
               </div>
             </div>
@@ -27,7 +27,7 @@ function About() {
               <div className="timeline-content">
                 <h3>New Britain High School</h3>
                 <p>
-                  Graduated in the class of 2025
+                  Graduated in the class of 2025. This was a place where I discovered both my strenths and my weaknesses which were key to my growth as a person. 
                 </p>
               </div>
             </div>
@@ -41,7 +41,7 @@ function About() {
             <div className="timeline-event">
               <div className="timeline-date">2023</div>
               <div className="timeline-content">
-                <h3>Tech Intern • Portland Web Solutions</h3>
+                <h3>Tech Intern Volunteer • New Britain MIS</h3>
                 <p>
                   Assisted in developing WordPress sites for clients, gaining real-world 
                   experience with client communications and project management.
@@ -49,9 +49,9 @@ function About() {
               </div>
             </div>
             <div className="timeline-event">
-              <div className="timeline-date">2020-21</div>
+              <div className="timeline-date">2024</div>
               <div className="timeline-content">
-                <h3>Freelance Developer</h3>
+                <h3>Data & Client Support Intern • Pratt & Whitneyx </h3>
                 <p>
                   Built custom Shopify stores and React applications while attending 
                   community college. Used earnings to fund university applications.
