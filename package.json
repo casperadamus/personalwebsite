@@ -2,7 +2,7 @@
   "name": "personal-website",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://casperadamus.github.io",
+  "homepage": "https://casperadamus.github.io/personalwebsite",
   "dependencies": {
     "emailjs-com": "^3.2.0",
     "react": "^18.2.0",
