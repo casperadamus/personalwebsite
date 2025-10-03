@@ -8,14 +8,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && rm -rf docs && mv build docs",
-    "deploy": "gh-pages -d docs -b main"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build -b gh-pages"
   },
@@ -39,5 +31,10 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
+  },
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "react-router-dom": "^7.9.3",
+    "react-scripts": "^5.0.1"
   }
 }

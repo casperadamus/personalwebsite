@@ -72,11 +72,11 @@ function Home() {
               <div className="metric-label">Cost of Attendance</div>
             </div>
             <div className="metric">
-              <div className="metric-value">$20 / $7000</div>
+              <div className="metric-value">$125/ $7000</div>
               <div className="metric-label">Tuition Covered</div>
             </div>
             <div className="metric">
-              <div className="metric-value">2</div>
+              <div className="metric-value">3</div>
               <div className="metric-label">Clients Served</div>
             </div>
             <div className="metric">
