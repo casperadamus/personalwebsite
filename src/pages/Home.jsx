@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <div className="container">
-      <p style={{ marginTop: '1.5rem' }}>Welcome to my website :)</p>
+      <p style={{ marginTop: '1.5rem' }}>welcome to my website :)</p>
 
       <p>
         On this site you can find a number of things:{' '}
@@ -18,10 +18,8 @@ function Home() {
       <div className="section">
         <h2 className="section-title">about me</h2>
         <p>
-          I'm an IT Consultant and Computer Engineering student at the University
-          of Connecticut. I provide targeted IT solutions for small businesses
-          and startups, specializing in efficient system implementations that
-          deliver measurable results.
+          I'm a Computer Engineering & Applied Mathematics student at the University
+          of Connecticut. Currently wokring as a Software Developer at i3.
         </p>
       </div>
 
