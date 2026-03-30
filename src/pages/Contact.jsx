@@ -6,17 +6,14 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
@@ -24,23 +21,21 @@ function Contact() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Replace these with your actual EmailJS credentials
     const serviceID = 'service_v9cp7pj';
     const templateID = 'template_slnrbij';
     const userID = 'AX87zizp7a2qcvEoi';
 
-    emailjs.send(serviceID, templateID, {
-      from_name: formData.name,
-      from_email: formData.email,
-      message: formData.message
-    }, userID)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+    emailjs
+      .send(serviceID, templateID, {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      }, userID)
+      .then(() => {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', message: '' });
       })
-      .catch((err) => {
-        console.error('FAILED...', err);
+      .catch(() => {
         setSubmitStatus('error');
       })
       .finally(() => {
@@ -49,106 +44,86 @@ function Contact() {
   };
 
   return (
-    <div className="contact-page">
-      <h1>Get in Touch</h1>
-      
-      <div className="contact-methods">
-        <section className="contact-form">
-          <h2>Send a Message</h2>
-          {submitStatus === 'success' && (
-            <div className="alert success">
-              Thank you! Your message has been sent successfully.
-            </div>
-          )}
-          {submitStatus === 'error' && (
-            <div className="alert error">
-              Oops! Something went wrong. Please try again later.
-            </div>
-          )}
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="Your name"
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="your.email@example.com"
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                placeholder="How can I help you?"
-                rows="5"
-              />
-            </div>
-            
-            <button 
-              type="submit" 
-              className="submit-btn"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
-        </section>
-        <section className="direct-contact">
-          <h2>Direct Contact</h2>
-          <div className="contact-info">
-            <p>
-              <span>📧</span>
-              <a href="mailto:adamus.casper@gmail.com">adamus.casper@gmail.com</a>
-            </p>
-            <p>
-              <span>📞</span>
-              <a href="tel:8605184081">(860) 518-4081</a>
-            </p>
-            <p>
-              <span>📍</span>
-              Connecticut, USA
-            </p>
+    <div className="container">
+      <h1>Contact</h1>
+      <p>
+        Feel free to reach out via email at{' '}
+        <a href="mailto:adamus.casper@gmail.com">adamus.casper@gmail.com</a>{' '}
+        or call <a href="tel:8605184081">(860) 518-4081</a>.
+      </p>
+      <p className="muted">Connecticut, USA · Mon–Fri 9am–5pm EST</p>
+
+      <div className="section">
+        <h2 className="section-title">send a message</h2>
+
+        {submitStatus === 'success' && (
+          <p style={{ color: '#2d7d2d' }}>
+            Thank you! Your message has been sent successfully.
+          </p>
+        )}
+        {submitStatus === 'error' && (
+          <p style={{ color: '#c33' }}>
+            Something went wrong. Please try again later.
+          </p>
+        )}
+
+        <form onSubmit={handleSubmit} className="contact-form">
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              placeholder="Your name"
+            />
           </div>
-          
-          <div className="availability">
-            <h3>Availability</h3>
-            <p>Monday-Friday: 9am - 5pm EST</p>
-            <p>Weekends: Limited availability</p>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              placeholder="you@example.com"
+            />
           </div>
-          
-          <div className="social-links">
-            <h3>Connect</h3>
-            <div className="social-icons">
-              <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                <span>GitHub</span>
-              </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-                <span>LinkedIn</span>
-              </a>
-            </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              placeholder="How can I help?"
+              rows="5"
+            />
           </div>
-        </section>
+          <button type="submit" className="send-btn" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send'}
+          </button>
+        </form>
+      </div>
+
+      <div className="section">
+        <h2 className="section-title">connect</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/casperadamus" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/casperadamus" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

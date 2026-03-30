@@ -1,110 +1,63 @@
 import React from 'react';
-import ProfileImage from '../images/profile.jpg';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <div className="container">
-      {/* Professional Header with Image */}
-      <header className="prose-header">
-        <div className="header-content">
-          <div className="header-text">
-            <h1>Casper Adamus</h1>
-            <p>IT Consultant & Computer Engineering Student</p>
-          </div>
-          <div className="profile-image-container">
-            <img 
-              src={ProfileImage} 
-              alt="Casper Adamus" 
-              className="profile-image"
-              loading = "eager"
-              decoding = "sync"
-            />
-          </div>
+      <p style={{ marginTop: '1.5rem' }}>Welcome to my website :)</p>
+
+      <p>
+        On this site you can find a number of things:{' '}
+        <Link to="/about">about</Link>,{' '}
+        <Link to="/projects">projects</Link>,{' '}
+        <Link to="/contact">contact</Link>
+      </p>
+
+      <hr />
+
+      <div className="section">
+        <h2 className="section-title">about me</h2>
+        <p>
+          I'm an IT Consultant and Computer Engineering student at the University
+          of Connecticut. I provide targeted IT solutions for small businesses
+          and startups, specializing in efficient system implementations that
+          deliver measurable results.
+        </p>
+      </div>
+
+      <div className="section">
+        <h2 className="section-title">services</h2>
+        <div className="post-item">
+          <h3>System & Infrastructure Solutions</h3>
+          <p>
+            Cost-effective technology repairs and upgrades, ensuring minimal
+            downtime and maximum productivity.
+          </p>
         </div>
-      </header>
-
-      <main>
-        {/* Services Section */}
-        <section className="prose-section">
-          <h2>Professional Services</h2>
+        <div className="post-item">
+          <h3>Custom Web Development</h3>
           <p>
-            I provide targeted IT solutions for small businesses and startups, 
-            specializing in efficient system implementations that deliver 
-            measurable results.
+            Responsive, performance-optimized websites built with modern
+            frameworks (React, Next.js). Focus on clean code and maintainable
+            architecture.
           </p>
-          
-          <div className="timeline">
-              <div className="timeline-event">
-              <div className="timeline-date">IT</div>
-              <div className="timeline-content">
-                <h3>System & Infrastructure Solutions</h3>
-                <p>
-                  Cost-effective technology repairs and upgrades,
-                  ensuring minimal downtime and maximum productivity.
-                </p>
-              </div>
-            </div>
-            <div className="timeline-event">
-              <div className="timeline-date">Web</div>
-              <div className="timeline-content">
-                <h3>Custom Web Development</h3>
-                <p>
-                  Responsive, performance-optimized websites built with modern 
-                  frameworks (React, Next.js). Focus on clean code and 
-                  maintainable architecture.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
+      </div>
 
-        {/* Funding Transparency */}
-        <section className="prose-section">
-          <h2>Education Funding Model</h2>
-          <p>
-            100% of all service revenue directly supports my Computer Engineering 
-            education at the University of Connecticut. These are the numbers for reference:
-          </p>
-          
-          <div className="metrics">
-            <div className="metric">
-              <div className="metric-value">$36,000</div>
-              <div className="metric-label">Cost of Attendance</div>
-            </div>
-            <div className="metric">
-              <div className="metric-value">$125/ $7000</div>
-              <div className="metric-label">Tuition Covered</div>
-            </div>
-            <div className="metric">
-              <div className="metric-value">3</div>
-              <div className="metric-label">Clients Served</div>
-            </div>
-            <div className="metric">
-              <div className="metric-value">100%</div>
-              <div className="metric-label">Satisfaction</div>
-            </div>
-          </div>
-        </section>
-
-        {/* Technical Articles 
-        <section className="prose-section">
-          <h2>Recent Technical Writings</h2>
-          <div className="timeline">
-            <div className="timeline-event">
-              <div className="timeline-date">Jul</div>
-              <div className="timeline-content">
-                <h3>Troubleshooting: Mac Not Discovering Boot Drive</h3>
-                <p>
-                  When your Mac fails to detect the boot drive during startup, you may encounter various error screens or unexpected behavior. 
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-*/}
-      </main>
+      <div className="section">
+        <h2 className="section-title">education funding</h2>
+        <p className="muted">
+          100% of service revenue supports my Computer Engineering education at
+          UConn.
+        </p>
+        <ul>
+          <li>Cost of Attendance: $36,000</li>
+          <li>Tuition Covered: $125 / $7,000</li>
+          <li>Clients Served: 3</li>
+          <li>Satisfaction: 100%</li>
+        </ul>
+      </div>
     </div>
-    
   );
 }
 

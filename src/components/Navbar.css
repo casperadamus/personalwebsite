@@ -1,126 +1,41 @@
-/* Navbar.css */
-:root {
-  --slate-900: #0f172a;
-  --slate-700: #334155;
-  --slate-400: #94a3b8;
-  --sky-600: #0284c7;
-  --stone-100: #f5f5f4;
-  --stone-200: #e7e5e4;
-}
-
-/* Navbar Container */
-.nav-container {
-  background-color: var(--stone-100);
-  border-bottom: 1px solid var(--stone-200);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  font-family: 'Lora', serif;
-}
-
-.nav-inner {
-  max-width: 70ch;
+.site-nav {
+  padding: 1.5rem 1.25rem 0;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 4rem;
 }
 
-/* Logo */
-.nav-logo {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--slate-900);
+.site-title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
 }
 
-.nav-logo:hover {
-  color: var(--sky-600);
+.site-title:hover {
+  color: var(--link);
+  text-decoration: none;
 }
 
-/* Navigation Links */
 .nav-links {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
 }
 
-.nav-link {
-  color: var(--slate-700);
+.nav-links a {
+  font-size: 0.9rem;
+  color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 400;
-  position: relative;
-  padding: 0.5rem 0;
-  transition: color 0.2s ease;
 }
 
-.nav-link:hover {
-  color: var(--slate-900);
+.nav-links a:hover {
+  color: var(--link);
+  text-decoration: underline;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--sky-600);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-/* Mobile Menu */
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--slate-900);
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 4rem;
-    left: 0;
-    right: 0;
-    background-color: var(--stone-100);
-    flex-direction: column;
-    gap: 0;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
-  .nav-links.open {
-    max-height: 300px;
-    padding: 1rem 0;
-    border-top: 1px solid var(--stone-200);
-    border-bottom: 1px solid var(--stone-200);
-  }
-
-  .nav-link {
-    padding: 0.75rem 1.5rem;
-    display: block;
-  }
-
-  .nav-link::after {
-    display: none;
-  }
-
-  .mobile-menu-btn {
-    display: block;
-  }
+.nav-links a.active {
+  color: var(--text);
+  font-weight: 500;
 }

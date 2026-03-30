@@ -1,58 +1,23 @@
 import './Navbar.css';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="nav-container">
+    <nav className="site-nav">
       <div className="nav-inner">
-        <Link to="/" className="nav-logo" onClick={() => setMenuOpen(false)}>
-          Casper Adamus
-        </Link>
-
-        <button 
-          className="mobile-menu-btn" 
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
-
-        <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <Link 
-            to="/" 
-            className="nav-link" 
-            onClick={() => setMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link 
-            to="/about" 
-            className="nav-link" 
-            onClick={() => setMenuOpen(false)}
-          >
-            Journey
-          </Link>
-        
-          <Link 
-            to="/contact" 
-            className="nav-link" 
-            onClick={() => setMenuOpen(false)}
-          >
-            Contact
-          </Link>
-          {/*<Link 
-            to="/contact" 
-            className="nav-link" 
-            onClick={() => setMenuOpen(false)}
-          >
-            Writing
-          </Link>*/}
+        <Link to="/" className="site-title">casper adamus</Link>
+        <div className="nav-links">
+          <Link to="/" className={isActive('/') ? 'active' : ''}>home</Link>
+          <Link to="/about" className={isActive('/about') ? 'active' : ''}>about</Link>
+          <Link to="/projects" className={isActive('/projects') ? 'active' : ''}>projects</Link>
+          <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>contact</Link>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

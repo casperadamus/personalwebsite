@@ -1,5 +1,13 @@
+import './Footer.css';
 import React from 'react';
-import './Footer.css'; // Assuming you have a CSS file for styling
+
 export default function Footer() {
-  return <footer>© {new Date().getFullYear()} Casper Adamus</footer>;
+  return (
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <hr />
+        <p>© {new Date().getFullYear()} Casper Adamus</p>
+      </div>
+    </footer>
+  );
 }
