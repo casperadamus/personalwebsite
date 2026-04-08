@@ -13,8 +13,8 @@
   --bg: #fff;
   --bg-muted: #f7f7f7;
   --border: #e0e0e0;
-  --link: #0366d6;
-  --link-hover: #024fa2;
+  --link: #444;
+  --link-hover: #000;
   --max-width: 640px;
 }
 
@@ -28,13 +28,14 @@ body {
 }
 
 a {
-  color: var(--link);
-  text-decoration: none;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: var(--link-hover);
+  text-decoration-color: var(--text);
 }
 
 h1 {

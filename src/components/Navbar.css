@@ -14,8 +14,7 @@
 }
 
 .site-title:hover {
-  color: var(--link);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .nav-links {
@@ -31,7 +30,7 @@
 }
 
 .nav-links a:hover {
-  color: var(--link);
+  color: var(--text);
   text-decoration: underline;
 }
 
