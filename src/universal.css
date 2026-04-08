@@ -7,6 +7,18 @@
 }
 
 :root {
+  --text: #d4d4d4;
+  --text-muted: #999;
+  --text-faint: #666;
+  --bg: #171717;
+  --bg-muted: #222;
+  --border: #333;
+  --link: #ccc;
+  --link-hover: #fff;
+  --max-width: 640px;
+}
+
+[data-theme="light"] {
   --text: #222;
   --text-muted: #666;
   --text-faint: #999;
@@ -15,7 +27,6 @@
   --border: #e0e0e0;
   --link: #444;
   --link-hover: #000;
-  --max-width: 640px;
 }
 
 body {
