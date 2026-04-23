@@ -1,14 +1,49 @@
 .site-footer {
-  padding: 0 1.25rem 2rem;
+  padding: 0 var(--s5) var(--s5);
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
-.footer-inner p {
-  font-size: 0.85rem;
+.footer-inner hr {
+  margin-bottom: var(--s3);
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.footer-phi {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.footer-phi-sym {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.footer-phi-eq {
   color: var(--text-faint);
 }
 
-.footer-inner hr {
-  margin-bottom: 1rem;
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  margin: 0;
+}
+
+.footer-stack {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 600px) {
+  .site-footer { padding: 0 var(--s4) var(--s4); }
 }
