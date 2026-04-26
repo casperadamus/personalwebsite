@@ -859,6 +859,105 @@ a:hover::after { width: 100%; }
 }
 
 /* ════════════════════════════════════════
+   FIBONACCI VISUALIZATION
+   ════════════════════════════════════════ */
+.fib-viz {
+  margin-top: var(--s4);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.fib-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Sequence strip below canvas */
+.fib-seq {
+  padding: var(--s3) var(--s4);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.fib-seq-top { display: flex; align-items: center; }
+
+.fib-nums-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s1);
+}
+
+.fib-pill {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold);
+  background: var(--gold-glow);
+  border: 1px solid rgba(212,175,55,0.18);
+  padding: 1px var(--s2);
+  border-radius: 3px;
+  transition: transform 0.15s;
+}
+
+.fib-pill-new {
+  animation: fib-pop 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+
+@keyframes fib-pop {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.fib-cursor-seq {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--gold);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+.fib-ratio-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  flex-wrap: wrap;
+}
+
+.fib-ratio-label { color: var(--text-faint); }
+.fib-ratio-eq    { color: var(--text-faint); }
+
+.fib-ratio-val {
+  color: var(--gold-dim);
+  font-weight: 600;
+  transition: color 0.4s;
+}
+
+.fib-ratio-val.is-phi {
+  color: var(--green-dim);
+  text-shadow: 0 0 8px rgba(74,222,128,0.4);
+}
+
+.fib-phi-badge {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--green-dim);
+  background: rgba(74,222,128,0.08);
+  border: 1px solid rgba(74,222,128,0.2);
+  padding: 0 var(--s2);
+  border-radius: 10px;
+  margin-left: var(--s1);
+  animation: fib-pop 0.4s ease both;
+}
+
+/* ════════════════════════════════════════
    RESPONSIVE
    ════════════════════════════════════════ */
 @media (max-width: 600px) {
